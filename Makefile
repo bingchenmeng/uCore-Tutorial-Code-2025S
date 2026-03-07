@@ -1,5 +1,5 @@
 .PHONY: clean build user
-all: build_kernel
+all: build/kernel
 
 LOG ?= error
 
@@ -90,7 +90,7 @@ QEMU = qemu-system-riscv64
 QEMUOPTS = \
 	-nographic \
 	-machine virt \
-	-bios $(BOOTLOADER) \
+	-bios /usr/lib/riscv64-linux-gnu/opensbi/generic/fw_jump.bin \
 	-kernel build/kernel	\
 
 run: build/kernel
