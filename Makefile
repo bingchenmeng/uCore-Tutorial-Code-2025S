@@ -94,7 +94,7 @@ clean:
 # BOARD
 BOARD		?= qemu
 SBI			?= rustsbi
-BOOTLOADER	:= ./bootloader/rustsbi-qemu.bin
+BOOTLOADER   := /usr/lib/riscv64-linux-gnu/opensbi/generic/fw_jump.bin
 
 QEMU = qemu-system-riscv64
 QEMUOPTS = \
